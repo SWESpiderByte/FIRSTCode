@@ -114,10 +114,14 @@ public class ServoTeleOpCode extends LinearOpMode {
             robot.rightClaw.setPosition(robot.MID_SERVO - clawOffset);
 
             // Use gamepad buttons to move arm up (Y) and down (A)
-            if (gamepad1.y)
+            if (gamepad1.y) {
+                telemetry.addData("Say", "Arm is Up :)");
                 robot.leftArm.setPower(robot.ARM_UP_POWER);
-            else if (gamepad1.a)
+            }
+            else if (gamepad1.a) {
+                telemetry.addData("Say", "Arm is Down :(");
                 robot.leftArm.setPower(robot.ARM_DOWN_POWER);
+            }
             else
                 robot.leftArm.setPower(0.0);
 
