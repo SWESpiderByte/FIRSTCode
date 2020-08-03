@@ -1,0 +1,1 @@
+This folder is intended to be a library of useful and reusable code for various components of the robot.
